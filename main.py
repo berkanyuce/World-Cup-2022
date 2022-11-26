@@ -19,10 +19,11 @@ The page will be updated daily.
 
 col1, col2, col3, col4, col5, col6 = st.columns(6)
 
-total_matches = 16.0
+successed_matches = 17.0
+total_matches = 24.0
 col3.metric("Predicted Number Of Matches", value=int(total_matches))
-succes_rate_str = str(int(12.0/total_matches*100))+'%'
-succes_rate = str("12/16")
+succes_rate_str = str(int(successed_matches/total_matches*100))+'%'
+succes_rate = str(int(successed_matches)) + "/" + str(int(total_matches))
 col4.metric("Success Rate", value=succes_rate_str, delta=succes_rate)
 
 
@@ -240,14 +241,14 @@ d = {'Team 1': ["Qatar",
                  "❌",
                  "✅",
                  "✅",
-                 "-",
-                 "-",
-                 "-",
-                 "-",
-                 "-",
-                 "-",
-                 "-",
-                 "-",
+                 "❌",
+                 "✅",
+                 "❌",
+                 "❌",
+                 "✅",
+                 "✅",
+                 "✅",
+                 "✅",
                  "-",
                  "-",
                  "-",
