@@ -19,8 +19,8 @@ The page will be updated daily.
 
 col1, col2, col3, col4, col5, col6 = st.columns(6)
 
-successed_matches = 17.0
-total_matches = 24.0
+successed_matches = 30.0
+total_matches = 44.0
 col3.metric("Predicted Number Of Matches", value=int(total_matches))
 succes_rate_str = str(int(successed_matches/total_matches*100))+'%'
 succes_rate = str(int(successed_matches)) + "/" + str(int(total_matches))
@@ -249,26 +249,26 @@ d = {'Team 1': ["Qatar",
                  "✅",
                  "✅",
                  "✅",
-                 "-",
-                 "-",
-                 "-",
-                 "-",
-                 "-",
-                 "-",
-                 "-",
-                 "-",
-                 "-",
-                 "-",
-                 "-",
-                 "-",
-                 "-",
-                 "-",
-                 "-",
-                 "-",
-                 "-",
-                 "-",
-                 "-",
-                 "-",
+                 "❌",
+                 "❌",
+                 "✅",
+                 "✅",
+                 "❌",
+                 "❌",
+                 "✅",
+                 "✅",
+                 "✅",
+                 "✅",
+                 "✅",
+                 "✅",
+                 "❌",
+                 "❌",
+                 "✅",
+                 "✅",
+                 "✅",
+                 "✅",
+                 "✅",
+                 "❌",
                  "-",
                  "-",
                  "-",
@@ -290,6 +290,9 @@ col1, col2, col3 = st.columns(3)
 
 col2.dataframe(df.style.applymap(color_df, subset=['Success']),
                   600, 1800)
+
+
+
 
 
 # streamlit run /Users/berkanyuce/Documents/GitHub/World-Cup-2022/main.py
