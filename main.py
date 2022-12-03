@@ -17,24 +17,37 @@ The page will be updated daily.
               """)
 
 
-col1, col2, col3, col4 = st.columns(4)
 
-successed_matches = 32.0
-total_matches = 48.0
-col1.header("Group Matches")
-col2.header("⚽️")
-col1.metric("Predicted Number Of Matches", value=int(total_matches))
-succes_rate_str = str(int(successed_matches/total_matches*100))+'%'
-succes_rate = str(int(successed_matches)) + "/" + str(int(total_matches))
+group_successed_matches = 32.0
+group_total_matches = 48.0
+
+knockout_successed_matches = 2.0
+knockout_total_matches = 2.0
+
+total_successed_matches = group_successed_matches + knockout_successed_matches
+total_matches = group_total_matches + knockout_total_matches
+
+
+col2.header("All Predicted Matches")
+col2.metric("Predicted Number Of Matches", value=int(total_matches))
+succes_rate_str = str(int(total_successed_matches/total_matches*100))+'%'
+succes_rate = str(int(total_successed_matches)) + "/" + str(int(total_matches))
 col2.metric("Success Rate", value=succes_rate_str, delta=succes_rate)
 
-successed_matches = 1.0
-total_matches = 1.0
+col1, col2, col3, col4 = st.columns(4)
+
+col1.header("Group Matches")
+col2.header("⚽️")
+col1.metric("Predicted Number Of Matches", value=int(group_total_matches))
+succes_rate_str = str(int(group_successed_matches/group_total_matches*100))+'%'
+succes_rate = str(int(group_successed_matches)) + "/" + str(int(group_total_matches))
+col2.metric("Success Rate", value=succes_rate_str, delta=succes_rate)
+
 col3.header("Knockout")
 col4.header("Stage")
-col3.metric("Predicted Number Of Matches", value=int(total_matches))
-succes_rate_str = str(int(successed_matches/total_matches*100))+'%'
-succes_rate = str(int(successed_matches)) + "/" + str(int(total_matches))
+col3.metric("Predicted Number Of Matches", value=int(knockout_total_matches))
+succes_rate_str = str(int(knockout_successed_matches/knockout_total_matches*100))+'%'
+succes_rate = str(int(knockout_successed_matches)) + "/" + str(int(knockout_total_matches))
 col4.metric("Success Rate", value=succes_rate_str, delta=succes_rate)
 
 import pandas as pd
@@ -333,7 +346,7 @@ knockout_matches = {'Stage': [ "Round of 16",
                         ],
              
                 'Success': ["✅",
-                            "❓",
+                            "✅",
                             "❓",
                             "❓",
                             "❓",
