@@ -163,13 +163,13 @@ def simulate_matches(team1, team2, n_matches=6500):
 
 print('Round of 16:')
 
-ko1 = simulate_matches('netherlands', 'england')['overall_winner']
-ko2 = simulate_matches('argentina', 'denmark')['overall_winner']
-ko3 = simulate_matches('usa', 'senegal')['overall_winner']
+ko1 = simulate_matches('netherlands', 'usa')['overall_winner']
+ko2 = simulate_matches('argentina', 'australia')['overall_winner']
+ko3 = simulate_matches('england', 'senegal')['overall_winner']
 ko4 = simulate_matches('france', 'poland')['overall_winner']
-ko5 = simulate_matches('germany', 'belgium')['overall_winner']
+ko5 = simulate_matches('japan', 'croatia')['overall_winner']
 ko6 = simulate_matches('brazil', 'korea republic')['overall_winner']
-ko7 = simulate_matches('croatia', 'spain')['overall_winner']
+ko7 = simulate_matches('morocco', 'spain')['overall_winner']
 ko8 = simulate_matches('portugal', 'switzerland')['overall_winner']
 
 print()
@@ -185,8 +185,8 @@ print()
 print('Semi Finals:')
 print()
 
-semifinals1 = simulate_matches(quarters1, quarters2)['overall_winner']
-semifinals2 = simulate_matches(quarters3, quarters4)['overall_winner']
+semifinals1 = simulate_matches(quarters1, quarters3)['overall_winner']
+semifinals2 = simulate_matches(quarters2, quarters4)['overall_winner']
 
 print()
 print('Finals:')

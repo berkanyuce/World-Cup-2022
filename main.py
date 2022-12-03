@@ -17,19 +17,29 @@ The page will be updated daily.
               """)
 
 
-col1, col2, col3, col4, col5, col6 = st.columns(6)
+col1, col2, col3, col4 = st.columns(4)
 
-successed_matches = 30.0
-total_matches = 44.0
+successed_matches = 32.0
+total_matches = 48.0
+col1.header("Group Matches")
+col2.header("⚽️")
+col1.metric("Predicted Number Of Matches", value=int(total_matches))
+succes_rate_str = str(int(successed_matches/total_matches*100))+'%'
+succes_rate = str(int(successed_matches)) + "/" + str(int(total_matches))
+col2.metric("Success Rate", value=succes_rate_str, delta=succes_rate)
+
+successed_matches = 1.0
+total_matches = 1.0
+col3.header("Knockout")
+col4.header("Stage")
 col3.metric("Predicted Number Of Matches", value=int(total_matches))
 succes_rate_str = str(int(successed_matches/total_matches*100))+'%'
 succes_rate = str(int(successed_matches)) + "/" + str(int(total_matches))
 col4.metric("Success Rate", value=succes_rate_str, delta=succes_rate)
 
-
 import pandas as pd
 import numpy as np
-d = {'Team 1': ["Qatar",
+group_matches = {'Team 1': ["Qatar",
                 "England",
                 "Senegal",
                 "USA",
@@ -269,29 +279,92 @@ d = {'Team 1': ["Qatar",
                  "✅",
                  "✅",
                  "❌",
-                 "-",
-                 "-",
-                 "-",
-                 "-",
+                 "✅",
+                 "❌",
+                 "❌",
+                 "✅",
 
                  ]}
-df = pd.DataFrame(data=d)
-df.index = np.arange(1, len(df) + 1)
+
+knockout_matches = {'Stage': [ "Round of 16",
+                               "Round of 16",
+                               "Round of 16",
+                               "Round of 16",
+                               "Round of 16",
+                               "Round of 16",
+                               "Round of 16",
+                               "Round of 16"
+                               ], 
+                    'Team 1': ["Holland",
+                               "Argentina",
+                               "England",
+                               "France",
+                               "Japan",
+                               "Brazil",
+                               "Morocco",
+                               "Portugal"
+                               ], 
+                    'Team 2': ["USA",
+                               "Australia",
+                               "Senegal",
+                               "Poland",
+                               "Croatia",
+                               "Korea Republic",
+                               "Spain",
+                               "Switzerland"
+                               ],
+                'Prediction': ["1",
+                               "1",
+                               "2",
+                               "1",
+                               "2",
+                               "1",
+                               "2",
+                               "1"
+                               ],
+                'Odd': ["1.25",
+                        "1.10",
+                        "1.25",
+                        "1.12",
+                        "1.55",
+                        "1.12",
+                        "1.25",
+                        "1.45"
+                        ],
+             
+                'Success': ["✅",
+                            "❓",
+                            "❓",
+                            "❓",
+                            "❓",
+                            "❓",
+                            "❓",
+                            "❓"
+                            ]}
+
+
+group_matches_df = pd.DataFrame(data=group_matches)
+group_matches_df.index = np.arange(1, len(group_matches_df) + 1)
+
+
+knockout_matches_df = pd.DataFrame(data=knockout_matches)
+knockout_matches_df.index = np.arange(1, len(knockout_matches_df) + 1)
 
 # Function 
 def color_df(val):
     if val == "✅":
         color = 'green'
     else :
-        color = 'red'
+        color = '#ff7e7e'
     return f'background-color: {color}'
 
-col1, col2, col3 = st.columns(3)
+col1, col2 = st.columns(2)
 
-col2.dataframe(df.style.applymap(color_df, subset=['Success']),
-                  600, 1800)
+col1.dataframe(group_matches_df.style.applymap(color_df, subset=['Success']),
+                  800, 1730)
 
-
+col2.dataframe(knockout_matches_df.style.applymap(color_df, subset=['Success']),
+                  800, 1730)
 
 
 
