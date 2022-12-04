@@ -8,9 +8,9 @@ col1, col2, col3 = st.columns(3)
 col2.markdown("""
               # World Cup 2022 Predictor
 
-The model developed using the machine learning tries to predict the results of world cup matches. The model, which was originally developed to predict only the teams that get through to the last 16 rounds, can also make predictions in the group stages. The model produces a result on the odds of both sides winning. If these odds are close, it recommends playing a double chance. In the round of 16, it will only guess the team that get through to the next round.
+Developed using machine learning, the model tries to predict the results of world cup matches. The model, which was originally developed to predict only the teams that made it to the round of 16, has been updated to make predictions in the group stages as well. The model produces an outcome based on the probability that both parties win. If these odds are close, it recommends playing a double chance. In the round of 16, it will only predict the team that has reached the next round.
 
-The theoretical success rate of the model is 69%. At the end of the tournament, achieving this rate will make the model as successful.
+The theoretical success rate of the model is 69% ("accuracy" with machine learning lexicon). Reaching this rate at the end of the tournament will make the model successful.
 
 The page will be updated daily.
 
