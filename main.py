@@ -1,5 +1,4 @@
 import streamlit as st
-from pathlib import Path
 
 st.set_page_config(layout="wide")
 
@@ -21,21 +20,21 @@ The page will be updated daily.
 group_successed_matches = 32.0
 group_total_matches = 48.0
 
-knockout_successed_matches = 4.0
-knockout_total_matches = 4.0
+knockout_successed_matches = 6.0
+knockout_total_matches = 6.0
 
 total_successed_matches = group_successed_matches + knockout_successed_matches
 total_matches = group_total_matches + knockout_total_matches
 
 
 col2.header("All Predicted Matches")
-col2.metric("Predicted Number Of Matches", value=int(total_matches))
+col1, col2, col3, col4, col5, col6 = st.columns(6)
+col3.metric("Predicted Number Of Matches", value=int(total_matches))
 succes_rate_str = str(int(total_successed_matches/total_matches*100))+'%'
 succes_rate = str(int(total_successed_matches)) + "/" + str(int(total_matches))
-col2.metric("Success Rate", value=succes_rate_str, delta=succes_rate)
+col4.metric("Success Rate", value=succes_rate_str, delta=succes_rate)
 
 col1, col2, col3, col4 = st.columns(4)
-
 col1.header("Group Matches")
 col2.header("⚽️")
 col1.metric("Predicted Number Of Matches", value=int(group_total_matches))
@@ -349,8 +348,8 @@ knockout_matches = {'Stage': [ "Round of 16",
                             "✅",
                             "✅",
                             "✅",
-                            "❓",
-                            "❓",
+                            "✅",
+                            "✅",
                             "❓",
                             "❓"
                             ]}
