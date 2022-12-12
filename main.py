@@ -310,6 +310,10 @@ knockout_matches = {'Stage': [ "Round of 16",
                                "Quarter Finals",
                                "Quarter Finals",
                                "Quarter Finals",
+                               "Semi Finals",
+                               "Semi Finals",
+                               "Third Place",
+                               "Final"
                                ], 
                     'Team 1': ["Holland",
                                "Argentina",
@@ -322,7 +326,11 @@ knockout_matches = {'Stage': [ "Round of 16",
                                "Holland",
                                "Croatia",
                                "England",
-                               "Morocco"
+                               "Morocco",
+                               "Argentina",
+                               "France",
+                               "❓",
+                               "❓"
                                ], 
                     'Team 2': ["USA",
                                "Australia",
@@ -335,7 +343,11 @@ knockout_matches = {'Stage': [ "Round of 16",
                                "Argentina",
                                "Brazil",
                                "France",
-                               "Portugal"
+                               "Portugal",
+                               "Croatia",
+                               "Morocco",
+                               "❓",
+                               "❓"
                                ],
                 'Prediction': ["1",
                                "1",
@@ -348,7 +360,11 @@ knockout_matches = {'Stage': [ "Round of 16",
                                "2",
                                "2",
                                "2",
-                               "2"
+                               "2",
+                               "1",
+                               "1",
+                               "❓",
+                               "❓"
                                ],
                 'Odd': ["1.25",
                         "1.10",
@@ -361,7 +377,11 @@ knockout_matches = {'Stage': [ "Round of 16",
                         "1.21",
                         "1.16",
                         "1.72",
-                        "1.30"
+                        "1.30",
+                        "1.38",
+                        "1.34",
+                        "❓",
+                        "❓"
                         ],
              
                 'Success': ["✅",
@@ -375,7 +395,11 @@ knockout_matches = {'Stage': [ "Round of 16",
                             "✅",
                             "❌",
                             "✅",
-                            "❌"
+                            "❌",
+                            "❓",
+                            "❓",
+                            "❓",
+                            "❓"
                             ]}
 
 
