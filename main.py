@@ -20,8 +20,8 @@ The page will be updated daily.
 group_successed_matches = 32.0
 group_total_matches = 48.0
 
-knockout_successed_matches = 9.0
-knockout_total_matches = 12.0
+knockout_successed_matches = 10.0
+knockout_total_matches = 13.0
 
 total_successed_matches = group_successed_matches + knockout_successed_matches
 total_matches = group_total_matches + knockout_total_matches
@@ -330,7 +330,7 @@ knockout_matches = {'Stage': [ "Round of 16",
                                "Argentina",
                                "France",
                                "❓",
-                               "❓"
+                               "Argentina"
                                ], 
                     'Team 2': ["USA",
                                "Australia",
@@ -396,7 +396,7 @@ knockout_matches = {'Stage': [ "Round of 16",
                             "❌",
                             "✅",
                             "❌",
-                            "❓",
+                            "✅",
                             "❓",
                             "❓",
                             "❓"
