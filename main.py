@@ -20,8 +20,8 @@ The page will be updated daily.
 group_successed_matches = 32.0
 group_total_matches = 48.0
 
-knockout_successed_matches = 10.0
-knockout_total_matches = 13.0
+knockout_successed_matches = 11.0
+knockout_total_matches = 14.0
 
 total_successed_matches = group_successed_matches + knockout_successed_matches
 total_matches = group_total_matches + knockout_total_matches
@@ -329,7 +329,7 @@ knockout_matches = {'Stage': [ "Round of 16",
                                "Morocco",
                                "Argentina",
                                "France",
-                               "❓",
+                               "Croatia",
                                "Argentina"
                                ], 
                     'Team 2': ["USA",
@@ -346,8 +346,8 @@ knockout_matches = {'Stage': [ "Round of 16",
                                "Portugal",
                                "Croatia",
                                "Morocco",
-                               "❓",
-                               "❓"
+                               "Morocco",
+                               "France"
                                ],
                 'Prediction': ["1",
                                "1",
@@ -363,8 +363,8 @@ knockout_matches = {'Stage': [ "Round of 16",
                                "2",
                                "1",
                                "1",
-                               "❓",
-                               "❓"
+                               "1",
+                               "1"
                                ],
                 'Odd': ["1.25",
                         "1.10",
@@ -380,8 +380,8 @@ knockout_matches = {'Stage': [ "Round of 16",
                         "1.30",
                         "1.38",
                         "1.34",
-                        "❓",
-                        "❓"
+                        "1.65",
+                        "1.92"
                         ],
              
                 'Success': ["✅",
@@ -397,7 +397,7 @@ knockout_matches = {'Stage': [ "Round of 16",
                             "✅",
                             "❌",
                             "✅",
-                            "❓",
+                            "✅",
                             "❓",
                             "❓"
                             ]}
