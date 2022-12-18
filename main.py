@@ -20,8 +20,8 @@ The page will be updated daily.
 group_successed_matches = 32.0
 group_total_matches = 48.0
 
-knockout_successed_matches = 11.0
-knockout_total_matches = 14.0
+knockout_successed_matches = 12.0
+knockout_total_matches = 15.0
 
 total_successed_matches = group_successed_matches + knockout_successed_matches
 total_matches = group_total_matches + knockout_total_matches
@@ -364,7 +364,7 @@ knockout_matches = {'Stage': [ "Round of 16",
                                "1",
                                "1",
                                "1",
-                               "1"
+                               "2"
                                ],
                 'Odd': ["1.25",
                         "1.10",
@@ -398,7 +398,7 @@ knockout_matches = {'Stage': [ "Round of 16",
                             "❌",
                             "✅",
                             "✅",
-                            "❓",
+                            "✅",
                             "❓"
                             ]}
 
